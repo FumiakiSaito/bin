@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+###################################
+# USage:
+#  text 15
+#  012345678901234
+###################################
+import sys
+
+args = sys.argv
+if len(args) < 2:
+    print('input num:')
+    sys.exit()
+max_cnt = args[1]
+if not max_cnt.isdigit():
+    print('numeric only!')
+    sys.exit()
+  
+loop_cnt = 0
+disp_cnt = 0
+while loop_cnt < int(max_cnt):
+    print(disp_cnt, end='')
+    disp_cnt+=1
+    loop_cnt+=1
+    if disp_cnt == 10:
+        disp_cnt = 0
